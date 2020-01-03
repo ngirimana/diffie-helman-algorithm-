@@ -65,11 +65,12 @@ int main()
     
     printf("Enter  message  to  be encrypted:   ");
     scanf("%s",&message);
+    
     int  len=strlen(message);
     int cipher[len];
 	printf("Encrypted  message is:  \n");
     for(i=0;i<len;i++){
-    	int d=("%d", (message[i]));
+    	int d=("%d", (message[i]))*ka;
     	cipher[i]=d;
     	//	printf(" %d  ",d );
     	printf("%d",cipher[i] );
@@ -77,7 +78,7 @@ int main()
 	char  plain[len]; 
 		printf("Decrypted  message is:  \n");
 	for(i=0;i<len;i++){
-	int c=("%c", (cipher[i]));
+	int c=("%c", (cipher[i]))/ka;
     	plain[i]=c;
     	//	printf(" %d  ",d );
     	printf("%c",plain[i] );
